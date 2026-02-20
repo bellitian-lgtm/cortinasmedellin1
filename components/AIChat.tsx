@@ -6,7 +6,7 @@ import { getChatResponse } from '../services/gemini.ts';
 const AIChat: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'model', text: '¡Hola! Soy Luz, tu asistente experta en decoración de Cortinas & Estilo. ¿Deseas renovar tus espacios hoy?' }
+    { role: 'model', text: '¡Hola! Soy Sebas, tu asistente experta en decoración de Cortinas & Estilo. ¿Deseas renovar tus espacios hoy?' }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -34,9 +34,9 @@ const AIChat: React.FC = () => {
       const response = await getChatResponse(chatHistory);
       setMessages(prev => [...prev, { role: 'model', text: response }]);
     } catch (err) {
-      setMessages(prev => [...prev, { 
-        role: 'model', 
-        text: 'Disculpa, tenemos una interrupción temporal en el servicio de IA. Puedes contactarnos al WhatsApp +57 300 000 0000 para una asesoría inmediata.' 
+      setMessages(prev => [...prev, {
+        role: 'model',
+        text: 'Disculpa, tenemos una interrupción temporal en el servicio de IA. Puedes contactarnos al WhatsApp +57 300 000 0000 para una asesoría inmediata.'
       }]);
     } finally {
       setIsLoading(false);
@@ -83,11 +83,10 @@ const AIChat: React.FC = () => {
           <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-50 custom-scrollbar">
             {messages.map((m, idx) => (
               <div key={idx} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-[85%] p-3.5 rounded-2xl text-sm leading-relaxed shadow-sm ${
-                  m.role === 'user' 
-                  ? 'bg-amber-600 text-white rounded-tr-none' 
-                  : 'bg-white text-slate-800 border border-slate-200 rounded-tl-none'
-                }`}>
+                <div className={`max-w-[85%] p-3.5 rounded-2xl text-sm leading-relaxed shadow-sm ${m.role === 'user'
+                    ? 'bg-amber-600 text-white rounded-tr-none'
+                    : 'bg-white text-slate-800 border border-slate-200 rounded-tl-none'
+                  }`}>
                   {m.text}
                 </div>
               </div>
