@@ -17,21 +17,15 @@ const VideoSection: React.FC = () => {
           {/* Decorative elements */}
           <div className="absolute -top-10 -left-10 w-40 h-40 bg-amber-600/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-amber-600/10 rounded-full blur-3xl"></div>
-          
+
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-800">
-            <video 
-              className="w-full h-auto aspect-video object-cover"
-              controls
-              autoPlay
-              muted
-              loop
-              playsInline
-            >
-              <source src="https://xzynoetnvkacrhbgknki.supabase.co/storage/v1/object/public/VIDEOS/_prompt_para_202601292043_u9ozi.mp4" type="video/mp4" />
-              Tu navegador no soporta la reproducción de videos.
-            </video>
+            <img
+              src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&q=80&w=1200"
+              alt="Proceso de Instalación y Diseño"
+              className="w-full h-full object-cover aspect-video"
+            />
           </div>
-          
+
           <div className="mt-8 flex justify-center gap-8">
             <div className="flex items-center gap-2 text-slate-400">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">

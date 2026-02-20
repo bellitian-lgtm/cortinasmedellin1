@@ -5,14 +5,14 @@ const Hero: React.FC = () => {
   return (
     <section id="inicio" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
-        <img 
-          src="https://xzynoetnvkacrhbgknki.supabase.co/storage/v1/object/public/IMAGENES/A-collage-of-different-modern-window-styles-and-designs-e1742177281296.webp" 
-          alt="Diseños de Ventanas Modernos" 
+        <img
+          src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a30?auto=format&fit=crop&q=80&w=1200"
+          alt="Diseños de Ventanas Modernos"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
-      
+
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl text-white mb-6 leading-tight">
           Elegancia y Confort para tus Espacios

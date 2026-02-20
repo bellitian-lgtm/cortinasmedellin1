@@ -1,7 +1,7 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { GoogleGenAI, Modality } from '@google/genai';
 
-const API_KEY = "AIzaSyA2EYmu3pyusIJ1W22cktns6ntEmnvPfe0";
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || "";
 
 // Helpers para procesamiento de audio
 function decode(base64: string) {

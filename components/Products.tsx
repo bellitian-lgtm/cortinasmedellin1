@@ -8,21 +8,21 @@ const PRODUCTS: Product[] = [
     name: 'Cortinas Enrollables',
     description: 'Minimalismo y funcionalidad con telas de alta calidad, desde translucidas hasta blackout.',
     category: 'Persianas',
-    image: 'https://xzynoetnvkacrhbgknki.supabase.co/storage/v1/object/public/IMAGENES/ShE_Bugan-Crema_07-2025_L1-1.png'
+    image: 'https://images.unsplash.com/photo-1627389955611-70c92a5d2e2f?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: '2',
     name: 'Sheer Metrópoli Marfil',
     description: 'El equilibrio perfecto entre privacidad y entrada de luz con nuestra exclusiva línea Metrópoli en tono Marfil.',
     category: 'Persianas',
-    image: 'https://xzynoetnvkacrhbgknki.supabase.co/storage/v1/object/public/IMAGENES/Sh_Metropoli%20Marfil_2.jpg'
+    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: '3',
     name: 'Cortinas en Onda Serena',
     description: 'La caída más elegante del mercado para salas y habitaciones con telas españolas.',
     category: 'Cortinas',
-    image: 'https://xzynoetnvkacrhbgknki.supabase.co/storage/v1/object/public/IMAGENES/Productos_Onda%20Serena_Pentagrama-tela-cuarto-alcoba-habitacion-entre%20abierta.png'
+    image: 'https://images.unsplash.com/photo-1632128531733-4f9011be47bf?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: '5',
@@ -49,27 +49,25 @@ const Products: React.FC = () => {
           {PRODUCTS.map((product) => (
             <div key={product.id} className="group relative bg-slate-50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="h-64 overflow-hidden">
-                <img 
-                  src={product.image} 
-                  alt={product.name} 
+                <img
+                  src={product.image}
+                  alt={product.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
-                <span className={`text-xs font-bold uppercase tracking-widest ${
-                  product.category === 'Sostenibilidad' ? 'text-emerald-600' : 'text-amber-600'
-                }`}>
+                <span className={`text-xs font-bold uppercase tracking-widest ${product.category === 'Sostenibilidad' ? 'text-emerald-600' : 'text-amber-600'
+                  }`}>
                   {product.category}
                 </span>
                 <h3 className="text-xl font-bold text-slate-800 mt-2 mb-3">{product.name}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed mb-4">
                   {product.description}
                 </p>
-                <button className={`font-bold text-sm border-b-2 transition-colors ${
-                  product.category === 'Sostenibilidad' 
-                  ? 'text-emerald-600 border-emerald-600 hover:text-emerald-700 hover:border-emerald-700' 
-                  : 'text-amber-600 border-amber-600 hover:text-amber-700 hover:border-amber-700'
-                }`}>
+                <button className={`font-bold text-sm border-b-2 transition-colors ${product.category === 'Sostenibilidad'
+                    ? 'text-emerald-600 border-emerald-600 hover:text-emerald-700 hover:border-emerald-700'
+                    : 'text-amber-600 border-amber-600 hover:text-amber-700 hover:border-amber-700'
+                  }`}>
                   VER DETALLES
                 </button>
               </div>
